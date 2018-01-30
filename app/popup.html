@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="ChromeBible">
+<head>
+  <meta charset="utf-8">
+  <!-- Bootstrap CSS -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- build:css styles/popup-vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link href="styles/main.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body ng-controller="MainCtrl as ctrl">
+  <nav class="navbar navbar-inverse bg-primary">
+    <span class="logo navbar-brand h1"><img src="images/bible.svg" alt="Bible" class="icon">ChromeBible</span>
+  </nav>
+  <div class="slide" ui-view></div>
+  <footer class="footer">
+      <div class="container">
+        <span class="text-muted cog btn"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></span>
+      </div>
+    </footer>
+
+  <!-- build:js scripts/popup-vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/popper.js/dist/umd/popper.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/bookCtrl.js"></script>
+
+  <!-- build:js scripts/popup.js -->
+  <script src="scripts/popup.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+@font-face { font-family: Spartan; src: url('spartan.otf'); }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  width:100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+body {
+  padding: 0;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  width:320px;
+  height:430px;
+}
+
+.navbar {
+  background-color: #FF4A1C;
+  color: #fff;
+}
+
+.logo {
+  font-family: Spartan;
+  font-size: 2em;
+  margin:10px;
+}
+
+.searchBar {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  height:55px;
+}
+
+.icon {
+  width:50px;
+  margin-right: 10px;
+  padding:5px;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.placeholder {
+  margin-top: 10px;
+}
+
+.placeholder * {
+  margin:10px;
+  color: #d3d3d3;
+}
+
+.spinner {
+  margin:50px 0;
+}
+
+.cog {
+  padding:10px 0;
+}
+
+/* Animations credit: https://stackoverflow.com/questions/28064286/fade-animation-between-state-transitions-in-ui-router */
+.slide.ng-enter {
+    /* transition on enter for .5s */
+    transition: .5s;
+
+    /* start with opacity 0 (invisible) */
+    opacity: 0;
+}
+
+/* end 'enter' transition on main view */
+.slide.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+}

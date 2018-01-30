@@ -1,0 +1,55 @@
+<!-- Search Bar -->
+<div class="row">
+  <div class="col-sm">
+    <form ng-submit="ctrl.search()">
+      <!-- <div class="form-group">
+        <input ng-model="ctrl.query" id="searchBar" type="text" class="form-control" placeholder="Search...">
+      </div> -->
+      <div class="input-group">
+        <input ng-model="ctrl.query" type="text" class="form-control searchBar" placeholder="Search...">
+        <span class="input-group-btn">
+          <button class="btn btn-info searchBar" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <div ng-if="ctrl.searching || ctrl.searchResults">
+    <div class="row" ng-if="ctrl.searching">
+      <div class="col-sm text-center spinner">
+        <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="row" ng-if="ctrl.searchResults">
+      <div class="col-sm">
+        <ul class="list-group" style="margin-bottom:60px;">
+          <li class="list-group-item" ng-repeat="result in ctrl.searchResults">
+            <div class="row">
+              <div class="col-sm text-left">
+                {{result.display || result.reference}}
+                <i class="fa fa-angle-right pull-right" ng-if="ctrl.type === 'verses'" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div ng-bind-html="result.text"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="!ctrl.searching && !ctrl.searchResults">
+    <div class="col-sm text-center placeholder">
+      <i class="fa fa-search fa-5x" aria-hidden="true"></i>
+      <p class="lead">Start searching above</p>
+      <p>
+        or
+      </p>
+    </div>
+  </div>
+  <div class="row" ng-if="!ctrl.searching && !ctrl.searchResults">
+    <div class="col-sm text-center">
+      <button type="button" class="btn btn-block btn-secondary" ui-sref="books">Browse Books</button>
+    </div>
+  </div>
+</div>
