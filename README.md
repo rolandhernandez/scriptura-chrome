@@ -1,0 +1,2 @@
+# scriptura-chrome
+Bible App
