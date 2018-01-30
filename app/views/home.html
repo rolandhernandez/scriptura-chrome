@@ -2,9 +2,6 @@
 <div class="row">
   <div class="col-sm">
     <form ng-submit="ctrl.search()">
-      <!-- <div class="form-group">
-        <input ng-model="ctrl.query" id="searchBar" type="text" class="form-control" placeholder="Search...">
-      </div> -->
       <div class="input-group">
         <input ng-model="ctrl.query" type="text" class="form-control searchBar" placeholder="Search...">
         <span class="input-group-btn">
@@ -14,7 +11,10 @@
     </form>
   </div>
 </div>
+
+<!-- Main Content View -->
 <div class="container">
+  <!-- Search Results -->
   <div ng-if="ctrl.searching || ctrl.searchResults">
     <div class="row" ng-if="ctrl.searching">
       <div class="col-sm text-center spinner">
@@ -38,6 +38,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Placeholder / Home Empty State -->
   <div class="row" ng-if="!ctrl.searching && !ctrl.searchResults">
     <div class="col-sm text-center placeholder">
       <i class="fa fa-search fa-5x" aria-hidden="true"></i>

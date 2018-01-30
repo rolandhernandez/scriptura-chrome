@@ -13,16 +13,21 @@
   <link href="styles/main.css" rel="stylesheet">
   <!-- endbuild -->
 </head>
-<body ng-controller="MainCtrl as ctrl">
+<body>
+  <!-- Navbar -->
   <nav class="navbar navbar-inverse bg-primary">
     <span class="logo navbar-brand h1"><img src="images/bible.svg" alt="Bible" class="icon">ChromeBible</span>
   </nav>
+
+  <!-- Main Content -->
   <div class="slide" ui-view></div>
+
+  <!-- Footer -->
   <footer class="footer">
-      <div class="container">
-        <span class="text-muted cog btn"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></span>
-      </div>
-    </footer>
+    <div class="container">
+      <span class="text-muted cog btn"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></span>
+    </div>
+  </footer>
 
   <!-- build:js scripts/popup-vendor.js -->
   <!-- bower:js -->
@@ -39,6 +44,7 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/bookCtrl.js"></script>
+  <script src="scripts/mainCtrl.js"></script>
 
   <!-- build:js scripts/popup.js -->
   <script src="scripts/popup.js"></script>
